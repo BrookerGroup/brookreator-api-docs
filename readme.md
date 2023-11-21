@@ -402,10 +402,10 @@ for QR code with AI
 ### POST /i2i/upload/:transactionID
 
 #### Description:
----
+`transactionID` random uuid string
 
-#### Query:
--
+#### Request Body:
+Form Data (png,jpg image type)
 
 #### Response:
 ```json
@@ -418,7 +418,7 @@ for QR code with AI
 ### POST /i2i/trainingImage/:transactionID
 
 #### Description:
----
+`transactionID` random uuid string
 
 #### Query:
 ```json
@@ -504,10 +504,10 @@ for QR code with AI
 ```
 
 
-### GET /i2i/training -> models
+### GET /i2i/training  (models)
 
 #### Description:
----
+Get all training historical
 
 #### Query:
 -
@@ -520,6 +520,7 @@ for QR code with AI
 ### POST /account/files
 
 #### Description:
+Universal Uploader API
 ---
 
 #### Query:
