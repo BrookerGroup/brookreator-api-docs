@@ -25,15 +25,17 @@ All non-secure endpoints do not need authentication and use the method GET.
 
 ### Secure endpoints
 All secure endpoints require [authentication](#constructing-the-request) and use the method POST.
-* [GET /account](#get-account)
-* [GET /account/images?offset=0&limit=500](#post-apimarketbalances)
-* [GET /account/favorites?offset=0&limit=500](#post-apimarketplace-bid)
-* [POST /account/favorites](#post-apimarketplace-ask)
-* [DELETE /account/favorites](#post-apimarketplace-bidtest)
-* [POST /t2i/generate](#post-apimarketplace-asktest)
-* [POST /i2i/trainingImage/:transactionID](#post-apimarketplace-ask-by-fiat)
-* [GET /i2i/training](#post-apimarketcancel-order)
-* [POST /account/files](#get-account)
+* [GET /account](#get-account) - Account Info 
+* [GET /account/images?offset=0&limit=500](#post-apimarketbalances) - Get All Images
+* [GET /account/favorites?offset=0&limit=500](#post-apimarketplace-bid) - Get All Favorited Images 
+* [POST /account/favorites](#post-apimarketplace-ask) - Add Favorite Image
+* [DELETE /account/favorites](#post-apimarketplace-bidtest)  - Remove Favorite Image
+* [POST /t2i/generate](#post-apimarketplace-asktest) - Generate Text to Images
+* [POST /i2i/trainingImage/:transactionID](#post)  - image uploader for AI Portrait training/generating. 
+* [GET /i2i/training](#post-apimarketcancel-order) - Train images for AI Portrait 
+* [POST /i2i/generateImage](#get-account) - Generate images for AI Portrait 
+* [POST /account/files](#get-account) - File uploader 
+* [POST /qrlg/generate](#get-account) - Generate QR code without AI
 
 
 # Constructing the request
@@ -330,13 +332,39 @@ Refer to the following for description of each endpoint
 #### Description:
 Text to Image generation API
 
-#### Query:
+#### Body [Text to Image]:
+* `prompt`		**string**		prompt
+* `samples`		**int**		    samples is number of generated results  (e.g 1 to 9)
+* `height`		**int**		    image height
+* `width`       **int**		    image width
+* `sampler`     **string**		sampler ['k_euler_ancestral','xx']
+* `steps`        **int**		        steps (e.g 1 to 100)
+* `cfgScale`     **float**		    cfgScale (e.g 1.0 to 10.0)
+* (optional) `seed`  **int**		        seed (e.g 128384784748)
+* (optional) `negativePrompt` **string**	negative prompt
+
+
+#### Body [QR Code with AI]:
+* `prompt`		**string**		prompt
+* `samples`		**int**		    samples is number of generated results  (e.g 1 to 9)
+* `height`		**int**		    image height
+* `width`       **int**		    image width
+* `sampler`     **string**		sampler ['k_euler_ancestral','xx']
+* `steps`        **int**		        steps (e.g 1 to 100)
+* `cfgScale`     **float**		    cfgScale (e.g 1.0 to 10.0)
+* (optional) `seed`  **int**		        seed (e.g 128384784748)
+* (optional) `negativePrompt` **string**	negative prompt
+* `isQRCode` **bool**		    set true for QR Code 
+* (optional) `initImageFilePath` **string**	 
+* `qrCodeFilePath` **string**	require if qrCodeContent is empty	 
+* `qrCodeContent` **string**	require if qrCodeFilePath is empty
+
+#### Requedt Example:
 for Text to Image
 ```json
 {
   "prompt": "Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee",
   "samples": 6,
-  "engine": "revAnimated_v122",
   "height": 640,
   "width": 640,
   "sampler": "k_euler_ancestral",
@@ -344,11 +372,6 @@ for Text to Image
   "cfgScale": 8,
   "seed": 0,
   "negativePrompt": "EasyNegative, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw",
-  "controlNetScale": 0,
-  "isQRCode": false,
-  "initImageFilePath": "",
-  "qrCodeFilePath": "",
-  "qrCodeContent": ""
 }
 ```
 
@@ -365,45 +388,13 @@ for QR code with AI
   "cfgScale": 7,
   "seed": "",
   "negativePrompt": "((nudity)), bad_pictures, (bad_prompt_version2:0.8), EasyNegative, 3D, cartoon, anime, sketches, (worst quality:2), (low quality: 2), people, hand, head, blur, blurry, out of frame, duplicate, watermark, signature, text, (((person))), (((human))), (((woman))), bad framing, out of frame, cropped, deformed, ugly, bad quality, error, watermark",
-  "controlNetScale": 0,
   "isQRCode": true,
   "initImageFilePath": "",
   "qrCodeFilePath": "",
   "qrCodeContent": "https://www.brookreator.ai/qr-generator"
 }
 ```
-
-for QR Code with AI
-```json
-{
-    "image": {
-        "id": 191576,
-        "createdAt": "2023-11-21T05:10:18.402Z",
-        "updatedAt": "2023-11-21T05:10:18.402Z",
-        "deletedAt": null,
-        "imageId": "61fdf1e1-6abe-4525-a21f-96fc3bbc307b",
-        "groupId": "b5ef532b-7d64-40e6-a0c6-2767481aa43f",
-        "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
-        "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/61fdf1e1-6abe-4525-a21f-96fc3bbc307b.png",
-        "vdoFile": "",
-        "prompt": "",
-        "engine": "",
-        "height": 512,
-        "width": 512,
-        "diffusion": "",
-        "cfgScale": 5,
-        "seed": "",
-        "negativePrompt": "",
-        "feature": "QRCODE-LOGO",
-        "isQRCode": false,
-        "qrCodeContent": "",
-        "url": "",
-        "vdoUrl": "",
-        "controlNetScale": 0
-    },
-    "Message": "Success"
-}
-```
+ 
 #### Response:
 ```json
 
