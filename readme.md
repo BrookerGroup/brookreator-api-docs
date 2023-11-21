@@ -68,7 +68,7 @@ Refer to the following for description of each endpoint
 ### GET /account
 
 #### Description:
----
+Get Account Info
 
 #### Query:
 -
@@ -87,7 +87,7 @@ Refer to the following for description of each endpoint
 ### GET /account/images
 
 #### Description:
----
+Get all images/videos
 
 #### Query:
 -
@@ -279,20 +279,200 @@ Refer to the following for description of each endpoint
 ### GET /account/favorites
 
 #### Description:
----
+get favorited images/videos
 
 #### Query:
 -
 
+
 #### Response:
 ```json
-
+{
+  "images": [
+    {
+      "id": 191558,
+      "createdAt": "2023-11-21T04:57:52Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "6248db25-bd23-48ac-b553-85bae0127ba9",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/6248db25-bd23-48ac-b553-85bae0127ba9.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/6248db25-bd23-48ac-b553-85bae0127ba9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=467a6538170c8ed03d923216cbbd4aa45436f29fcdf49581a84affbb678b5c50",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191557,
+      "createdAt": "2023-11-21T04:57:52Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "2abd2953-e34a-48be-b1b7-9baf0abe8b40",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/2abd2953-e34a-48be-b1b7-9baf0abe8b40.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/2abd2953-e34a-48be-b1b7-9baf0abe8b40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=0fbf23452e7bedee186a4e9179bd7791f1deeb1cd193a34a9b42360694b3c42f",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191556,
+      "createdAt": "2023-11-21T04:57:52Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "c78218d1-ac6c-4ea5-b8f5-c10ee786372b",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/c78218d1-ac6c-4ea5-b8f5-c10ee786372b.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/c78218d1-ac6c-4ea5-b8f5-c10ee786372b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=08602926d83484ec9297210441dadd16bc29ac1eff4ec0cd5aec61a2dd0521e9",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191555,
+      "createdAt": "2023-11-21T04:57:51Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "b0549de0-84b9-4bf3-8626-13e515433c3e",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/b0549de0-84b9-4bf3-8626-13e515433c3e.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/b0549de0-84b9-4bf3-8626-13e515433c3e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=7ab6c8857ab5e7ddc0cd25c782d5c15b3e11d3d1fc38891fc42f5eba447101ab",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191554,
+      "createdAt": "2023-11-21T04:57:51Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "87d9fa6c-30b8-4f12-bc45-2c6174b91722",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/87d9fa6c-30b8-4f12-bc45-2c6174b91722.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/87d9fa6c-30b8-4f12-bc45-2c6174b91722.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=033f24b1353065747da0dcae4b0482dc9ed05f127b624e0e0c9ee1b9bca253a1",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191553,
+      "createdAt": "2023-11-21T04:57:51Z",
+      "updatedAt": "0001-01-01T00:00:00Z",
+      "deletedAt": null,
+      "imageId": "22a24970-0194-4feb-8487-e19f6e45f9f2",
+      "groupId": "f7ac0235-5f81-4cef-afdc-8d9490c490c5",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/22a24970-0194-4feb-8487-e19f6e45f9f2.png",
+      "vdoFile": "",
+      "prompt": "Portrait of a caucasian beautiful woman in a style of retro, dressed in colorful warm-toned clothing, in a photo-realistic style, ultra high res, in a retro interior design, pastel tone, by Wes Anderson, bright, cinematic, tableau shot, head-on camera angle, harmonious color palettes, (high quality), close up on face, \u003clora:KimYooJung:0.7\u003e \u003clora:CustomModel:0.7\u003e",
+      "engine": "-",
+      "height": 500,
+      "width": 800,
+      "diffusion": "DDIM",
+      "cfgScale": 10,
+      "seed": "760756777",
+      "negativePrompt": "canvas frame, cartoon, 3d, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, (((long neck))), signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two person​",
+      "feature": "IMAGE-TRAINING",
+      "isQRCode": false,
+      "qrCodeContent": "",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/22a24970-0194-4feb-8487-e19f6e45f9f2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=ae78b821f85e0102a7779e4ca6dd42483a44b5b99a39498eab7c6fc05eaf35ad",
+      "vdoUrl": "",
+      "controlNetScale": 0
+    },
+    {
+      "id": 191552,
+      "createdAt": "2023-11-21T04:57:14.707Z",
+      "updatedAt": "2023-11-21T04:57:14.707Z",
+      "deletedAt": null,
+      "imageId": "50c7d05e-4dff-498e-a1b1-66e0267c3dc2",
+      "groupId": "b4fa3e15-56a8-4f3e-8382-873485dbfa07",
+      "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+      "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/50c7d05e-4dff-498e-a1b1-66e0267c3dc2.png",
+      "vdoFile": "",
+      "prompt": "a portrait of porcelain maneki neko lucky cat surrounded with glistening white in a style of art nouveau and modernism, volumetric lighting, hdr, (masterpiece, soft light, finely detailed, hdr, (high quality:1.4), (ultra highres:1.2), (photorealistic:1.4), (8k, RAW photo:1.2), depth of field",
+      "engine": "",
+      "height": 768,
+      "width": 768,
+      "diffusion": "k_euler_ancestral",
+      "cfgScale": 7,
+      "seed": "349082741",
+      "negativePrompt": "((nudity)), bad_pictures, (bad_prompt_version2:0.8), EasyNegative, 3D, cartoon, anime, sketches, (worst quality:2), (low quality: 2), people, hand, head, blur, blurry, out of frame, duplicate, watermark, signature, text, (((person))), (((human))), (((woman))), bad framing, out of frame, cropped, deformed, ugly, bad quality, error, watermark",
+      "feature": "TEXT-TO-IMAGE",
+      "isQRCode": true,
+      "qrCodeContent": "https://www.brookreator.ai/qr-generator",
+      "url": "https://brookreator-bucket-prod.s3.ap-southeast-1.amazonaws.com/b1bfce18-b93d-477d-a40c-4a0f40e4ecda/50c7d05e-4dff-498e-a1b1-66e0267c3dc2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTTUFYRRWI6%2F20231121%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231121T050510Z\u0026X-Amz-Expires=86400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=1f4e389b7f5218f42dd04aa3409b2058065d22ea450d8d87554aa17dd7dc3eef",
+      "vdoUrl": "",
+      "controlNetScale": 1.4
+    } 
+  ],
+  "message": "success"
+}
 ```
 
 ### POST /account/favorites
 
 #### Description:
----
+Add a favorite image
 
 #### Request:
 ```json
@@ -305,13 +485,13 @@ Refer to the following for description of each endpoint
 
 #### Response:
 ```json
-
+ {"message":"success"}
 ```
 
 ### DELETE /account/favorites
 
 #### Description:
----
+Remove a favorite image
 
 #### Request:
 ```json
@@ -324,13 +504,15 @@ Refer to the following for description of each endpoint
 
 #### Response:
 ```json
-
+ {"message":"success"}
 ```
 
 ### POST /t2i/generate
 
 #### Description:
 Text to Image generation API
+- Text to Image
+- QR code with AI
 
 #### Body [Text to Image]:
 * `prompt`		**string**		prompt
