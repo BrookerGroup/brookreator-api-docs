@@ -26,16 +26,16 @@ All non-secure endpoints do not need authentication and use the method GET.
 ### Secure endpoints
 All secure endpoints require [authentication](#constructing-the-request) and use the method POST.
 * [GET /account](#get-account) - Account Info 
-* [GET /account/images?offset=0&limit=500](#post-apimarketbalances) - Get All Images
-* [GET /account/favorites?offset=0&limit=500](#post-apimarketplace-bid) - Get All Favorited Images 
-* [POST /account/favorites](#post-apimarketplace-ask) - Add Favorite Image
-* [DELETE /account/favorites](#post-apimarketplace-bidtest)  - Remove Favorite Image
-* [POST /t2i/generate](#post-apimarketplace-asktest) - Generate Text to Images
-* [POST /i2i/trainingImage/:transactionID](#post)  - image uploader for AI Portrait training/generating. 
-* [GET /i2i/training](#post-apimarketcancel-order) - Train images for AI Portrait 
-* [POST /i2i/generateImage](#get-account) - Generate images for AI Portrait 
-* [POST /account/files](#get-account) - File uploader 
-* [POST /qrlg/generate](#get-account) - Generate QR code without AI
+* [GET /account/images?offset=0&limit=500](#get-accountimages) - Get All Images
+* [GET /account/favorites?offset=0&limit=500](#get-accountfavorites) - Get All Favorited Images 
+* [POST /account/favorites](#post-accountfavorites) - Add Favorite Image
+* [DELETE /account/favorites](#delete-accountfavorites)  - Remove Favorite Image
+* [POST /t2i/generate](#post-t2igenerate) - Generate Text to Images
+* [POST /i2i/trainingImage/:transactionID](#post-i2itrainingImagetransactionID)  - image uploader for AI Portrait training/generating. 
+* [GET /i2i/training](#get-i2itraining) - Train images for AI Portrait 
+* [POST /i2i/generateImage](#post-i2igenerateimage) - Generate images for AI Portrait 
+* [POST /account/files](#pst-accountfiles) - File uploader 
+* [POST /qrlg/generate](#pst-qrlggenerate) - Generate QR code without AI
 
 
 # Constructing the request
