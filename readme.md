@@ -33,7 +33,7 @@ All secure endpoints require [authentication](#constructing-the-request) and use
 * [POST /t2i/generate](#post-apimarketplace-asktest)
 * [POST /i2i/trainingImage/:transactionID](#post-apimarketplace-ask-by-fiat)
 * [GET /i2i/training](#post-apimarketcancel-order)
-
+* [POST /account/files](#get-account)
 
 
 # Constructing the request
@@ -292,8 +292,14 @@ Refer to the following for description of each endpoint
 #### Description:
 ---
 
-#### Query:
--
+#### Request:
+```json
+{
+  "imageIds": [
+    "ceb86098-4dbd-498f-a556-d047d59f9806"
+  ]
+}
+```
 
 #### Response:
 ```json
@@ -305,8 +311,14 @@ Refer to the following for description of each endpoint
 #### Description:
 ---
 
-#### Query:
--
+#### Request:
+```json
+{
+  "imageIds": [
+    "ceb86098-4dbd-498f-a556-d047d59f9806"
+  ]
+}
+```
 
 #### Response:
 ```json
@@ -340,7 +352,7 @@ for Text to Image
 }
 ```
 
-for QR code
+for QR code with AI
 ```json
 {
   "prompt": "a portrait of porcelain maneki neko lucky cat surrounded with glistening white in a style of art nouveau and modernism, volumetric lighting, hdr, (masterpiece, soft light, finely detailed, hdr, (high quality:1.4), (ultra highres:1.2), (photorealistic:1.4), (8k, RAW photo:1.2), depth of field",
@@ -361,6 +373,37 @@ for QR code
 }
 ```
 
+for QR Code with AI
+```json
+{
+    "image": {
+        "id": 191576,
+        "createdAt": "2023-11-21T05:10:18.402Z",
+        "updatedAt": "2023-11-21T05:10:18.402Z",
+        "deletedAt": null,
+        "imageId": "61fdf1e1-6abe-4525-a21f-96fc3bbc307b",
+        "groupId": "b5ef532b-7d64-40e6-a0c6-2767481aa43f",
+        "userId": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda",
+        "fileName": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/61fdf1e1-6abe-4525-a21f-96fc3bbc307b.png",
+        "vdoFile": "",
+        "prompt": "",
+        "engine": "",
+        "height": 512,
+        "width": 512,
+        "diffusion": "",
+        "cfgScale": 5,
+        "seed": "",
+        "negativePrompt": "",
+        "feature": "QRCODE-LOGO",
+        "isQRCode": false,
+        "qrCodeContent": "",
+        "url": "",
+        "vdoUrl": "",
+        "controlNetScale": 0
+    },
+    "Message": "Success"
+}
+```
 #### Response:
 ```json
 
@@ -483,8 +526,18 @@ for QR code
 
 ```
 
+### POST /account/files
 
+#### Description:
+---
 
+#### Query:
+-
+Form Data Type
 
-
-{"imageIds":["ceb86098-4dbd-498f-a556-d047d59f9806"]}
+#### Response:
+```json
+{
+    "filePath": "b1bfce18-b93d-477d-a40c-4a0f40e4ecda/91752406-c2e0-48d7-bbc7-488ce1b40cca.png"
+}
+```
