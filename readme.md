@@ -672,9 +672,7 @@ Form Data (png,jpg image type)
   "width": 800,
   "height": 500,
   "seed": "",
-  "poses": [
-    
-  ]
+  "poses": []
 }
 ```
 
@@ -705,8 +703,7 @@ Get all training historical
 Universal Uploader API
 ---
 
-#### Query:
--
+#### Request:
 Form Data Type
 
 #### Response:
