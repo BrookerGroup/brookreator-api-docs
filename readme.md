@@ -3,8 +3,8 @@
 
 
 # Change log
-* 2018-12-16 Updated documentation
-* 2018-08-09 V1 Release
+* 2023-11-22 Updated APIs discription
+* 2023-11-21 Created documentation 
 
 # Table of contents
 * [Base URL](#base-url)
