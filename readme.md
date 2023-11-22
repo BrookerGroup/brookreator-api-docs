@@ -1,6 +1,9 @@
 
 # RESTful API for Brookreator (2023-11-22)
 
+# To Do List
+* [ ] Add more detail for each API endpoint such as posible responses.
+* [ ] Add more explanation for each request parameters
 
 # Change log
 * 2023-11-22 Updated APIs discription
