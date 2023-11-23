@@ -61,6 +61,22 @@ Authorization: Bearer eyJraWQiOiJzR3Bpc0RcL0NRSG5yOFdsc3FsSmtSaHBnbzFFZVhURlI2bU
 ### Payload (POST)
 The payload is always JSON. **Always include timestamp in the payload; use `ts` as the key name for timestamp**.
 
+# Const Data
+
+- Text to Image Themes 
+```json
+TODO: add json object for text to image themes
+```
+- Ai-Portrait Styles
+```json
+TODO: add json object for Ai-Portrait styles
+```
+- AI QR code Theme
+```json
+TODO: add json object for Ai-Portrait styles
+```
+
+TODO: Add a link for download thumbnail images for theme and styles. 
 
 # API documentation
 Refer to the following for description of each endpoint
