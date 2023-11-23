@@ -64,7 +64,7 @@ Authorization: Bearer eyJraWQiOiJzR3Bpc0RcL0NRSG5yOFdsc3FsSmtSaHBnbzFFZVhURlI2bU
 ### Payload (POST)
 The payload is always JSON. **Always include timestamp in the payload; use `ts` as the key name for timestamp**.
 
-# Const Data
+# Themes & Styles Data
 
 - Text to Image Themes 
 ```json
