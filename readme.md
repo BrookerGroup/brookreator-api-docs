@@ -641,7 +641,8 @@ AI_Portrait_Styles : [
 ]
 ```
 
-TODO: Add a link for download thumbnail images for theme and styles. 
+Thumbnail images for theme and styles.
+: https://brookergroup-my.sharepoint.com/:f:/p/natheenont/EtG_RgxwhyBJh0NZlEB0nLAB9SiyBy7l1cvLzh5IfKN1cQ?e=8vdJi3
 
 # API documentation
 Refer to the following for description of each endpoint
