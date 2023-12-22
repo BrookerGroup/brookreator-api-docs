@@ -29,7 +29,7 @@ All non-secure endpoints do not need authentication and use the method GET.
 ### Secure endpoints
 All secure endpoints require [authentication](#constructing-the-request) and use the method POST.
 * [GET /account](#get-account) - Account Info
-* [POST /account/files](#pst-accountfiles) - General File uploader 
+* [POST /account/files](#post-accountfiles) - General File uploader 
 * [GET /account/models](#get-model) - Get all models 
 * [GET /account/images?offset=0&limit=500](#get-accountimages) - Get All Images
 * [GET /account/favorites?offset=0&limit=500](#get-accountfavorites) - Get All Favorited Images 
