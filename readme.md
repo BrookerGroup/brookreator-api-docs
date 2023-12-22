@@ -1306,17 +1306,77 @@ Form Data (png,jpg image type)
 ```
 
 
-### GET /i2i/training  (models)
+### POST POST /i2i/generateImage/:transactionID
 
 #### Description:
-Get all training historical
 
 #### Query:
--
+```json
+{
+  "images": [],
+  "styles": [
+    "a close-up portrait of a woman wearing Christmas winter clothes, a Christmas holiday in the snow village, smiling in gratification, great composition, cinematic shot, amazing time, Christmas time, snowing,<lora:CustomModel:0.85>",
+    "a close-up portrait of a woman,wearing a Christmas clothes, a Christmas holiday in the snow village with the aurora dances across the night sky, great composition, cinematic shot, amazing time, smiling in gratification, snowing,<lora:CustomModel:0.85>",
+    "a close-up portrait of a woman,wearing a Christmas clothes, a Christmas holiday in the snow village with the aurora dances across the night sky, great composition, cinematic shot, amazing time, smiling in gratification, snowing,<lora:CustomModel:0.85>",
+    "a close-up portrait of a woman wearing Christmas winter clothes, gingerbread wonderland with ornaments made of gingerbread cookies and candy canes , smiling in gratification, great composition, cinematic shot, amazing time, Christmas time, snowing, Santa hat, <lora:CustomModel:0.85>",
+    "a close-up portrait of a woman wearing Christmas winter clothes, a Christmas holiday in the snow village, smiling in gratification, great composition, cinematic shot, amazing time, Christmas time, snowing,<lora:CustomModel:0.85>"
+  ],
+  "modelKey": "-",
+  "lang": "EN",
+  "negatives": [
+    "(worst quality, low quality:1.4), watermark, signature, monochrome, bad anatomy, bad proportions, negative_hand-neg, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two face, boy, man",
+    "(worst quality, low quality:1.4), watermark, signature, monochrome, bad anatomy, bad proportions, negative_hand-neg, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two face, boy, man",
+    "(worst quality, low quality:1.4), watermark, signature, monochrome, bad anatomy, bad proportions, negative_hand-neg, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two face, boy, man",
+    "(worst quality, low quality:1.4), watermark, signature, monochrome, bad anatomy, bad proportions, negative_hand-neg, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two face",
+    "(worst quality, low quality:1.4), watermark, signature, monochrome, bad anatomy, bad proportions, negative_hand-neg, disfigured, deformed, ((extra limbs)), ((close up)), weird colors, blurry, (duplicate), (morbid), ((mutilated)), (out of frame), extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, ugly, bad anatomy, bad proportions, (cloned face), gross proportions, (malformed limbs), (missing arms), missing legs, extra arms, extra legs, fused fingers, too many fingers, signature, video game, tiling, cross-eye, body out of frame, 3d render, necklace, ((earring)), watermark, signature, text, lace, two face, boy, man"
+  ],
+  "samplers": [
+    "DPM++ SDE Karras",
+    "DPM++ SDE Karras",
+    "DPM++ SDE Karras",
+    "DPM++ SDE Karras",
+    "DPM++ SDE Karras"
+  ],
+  "steps": [
+    25,
+    25,
+    25,
+    25,
+    25
+  ],
+  "clip_skips": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "models": [
+    "3dAnimationDiffusion_v10",
+    "3dAnimationDiffusion_v10",
+    "3dAnimationDiffusion_v10",
+    "3dAnimationDiffusion_v10",
+    "3dAnimationDiffusion_v10"
+  ],
+  "aesthetics": [
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "width": 640,
+  "height": 800,
+  "seed": "",
+  "poses": []
+}
+```
 
 #### Response:
 ```json
-
+{
+  "message": "success"
+}
 ```
 
 ### POST /account/files
