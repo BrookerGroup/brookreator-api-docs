@@ -1306,7 +1306,7 @@ Form Data (png,jpg image type)
 ```
 
 
-### POST POST /i2i/generateImage/:transactionID
+### POST /i2i/generateImage/:transactionID
 
 #### Description:
 
