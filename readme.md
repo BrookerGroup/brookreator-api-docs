@@ -28,7 +28,8 @@ All non-secure endpoints do not need authentication and use the method GET.
 
 ### Secure endpoints
 All secure endpoints require [authentication](#constructing-the-request) and use the method POST.
-* [GET /account](#get-account) - Account Info 
+* [GET /account](#get-account) - Account Info
+* [GET /account/models](#get-model) - Get all models 
 * [GET /account/images?offset=0&limit=500](#get-accountimages) - Get All Images
 * [GET /account/favorites?offset=0&limit=500](#get-accountfavorites) - Get All Favorited Images 
 * [POST /account/favorites](#post-accountfavorites) - Add Favorite Image
@@ -685,6 +686,25 @@ Get Account Info
 }
 ```
 
+### GET /account/models
+
+#### Description:
+Get All Models
+
+#### Query:
+-
+
+#### Response:
+```json
+[
+  {
+    "training_id": "9e299ddd-4287-4803-82af-5bbc08fd8cd8",
+    "name": "Model1",
+    "cover_image": "https://brookreator-image-training-dev.s3.ap-southeast-1.amazonaws.com/ca377ec9-e094-4dda-b355-52cbb766d056/9e299ddd-4287-4803-82af-5bbc08fd8cd8/de80291a-4873-4c0d-939b-c95c80caf5be.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAT762APTT5JUTQEXE%2F20231222%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231222T050943Z\u0026X-Amz-Expires=3600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=21c498494305298358f6e60415ac47dc2bfac26bfe291f6b18def7d04be5896c",
+    "status": "DONE"
+  }
+]%
+```
 
 ### GET /account/images
 
